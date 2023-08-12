@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h2>Events</h2>
+    <div id="cards">
+	{% for event in events %}
+		<div class="card" style="width: 18rem;">
+  		<img src="{{MEDIA_URL}}{{event.cover_image.url}}" class="card-img-top" alt="...">
+  		<div class="card-body">
+    		<h5 class="card-title">{{event.title}}</h5>
+    		<p class="card-text">{{event.content}}</p>
+    		<a href="events/details/{{event.title}}" class="btn btn-primary">Go somewhere</a>
+  		</div>
+		</div>
+	{% endfor %}
+</div>
+    {{ Date }}
+{% endblock %}
